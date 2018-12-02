@@ -4,6 +4,30 @@
 [![](https://images.microbadger.com/badges/image/wurstmeister/kafka.svg)](https://microbadger.com/images/wurstmeister/kafka "Get your own image badge on microbadger.com")
 [![Build Status](https://travis-ci.org/wurstmeister/kafka-docker.svg?branch=master)](https://travis-ci.org/wurstmeister/kafka-docker)
 
+'''
+My additions to the docs
+========================
+
+# To run kafka docker image
+
+follow this link: https://hub.docker.com/r/wurstmeister/kafka/
+
+gotchas: You have to run it inside docker-machine on your Mac do you can get the advertised hostname for kafka brokers. In order to do that
+use `docker-machine` cli and create a new virtual machine if not already running and next important step:
+run `$ eval(docker-machine env dev)` so docker compose will now use your docker machine as the host instead of localhost
+
+# Kafka-Docker connectivity concepts
+
+follow this link: https://github.com/wurstmeister/kafka-docker/wiki/Connectivity
+
+To test your setup, follow this link: http://wurstmeister.github.io/kafka-docker/
+
+Gotcha: when starting a Kafka Shell, make sure to use host IP for zookeeper as well, since zookeeper is also being hosted on docker machine.
+
+`start-kafka-shell.sh <DOCKER_HOST_IP(192.168.99.102)> <ZK_HOST(192.168.99.102):ZK_PORT(2181)>`
+
+'''
+
 kafka-docker
 ============
 
